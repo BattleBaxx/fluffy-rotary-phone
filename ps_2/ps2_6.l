@@ -6,7 +6,7 @@ num [0-9]
     FILE* yyout_invalid;
 %}
 %%
-"http"s?:\/\/({alpha}|{num}|-)*".com" fprintf(yyout_valid, "%s\n", yytext);
+(http(s)?:\/\/)?(www\.)?({alnum}+\.)?{alnum}+\.{alnum}{alnum}({alnum})?(\.{alnum}{alnum}({alnum})?)? fprintf(yyout_valid, "%s\n", yytext);
 . fprintf(yyout_invalid, "%s", yytext);
 %%
 int main(int argc, char* argv[]){
