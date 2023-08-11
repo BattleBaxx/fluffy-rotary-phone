@@ -5,6 +5,6 @@ int main(void){
     char* s = "string constant 123";
 
     some_label:
-        printf("shahahahahaa")
+        printf("shahahahahaa");
 
 }
